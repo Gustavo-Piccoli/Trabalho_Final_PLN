@@ -1,0 +1,29 @@
+{
+  "model_name": "roberta-base",
+  "smoke": false,
+  "threshold": 0.5,
+  "max_length": 64,
+  "epochs": 3.0,
+  "validation": {
+    "val_loss": 0.09323886036872864,
+    "val_macro_f1": 0.2615411110123337,
+    "val_micro_f1": 0.5213202132021321,
+    "val_weighted_f1": 0.45539540892172514,
+    "val_subset_accuracy": 0.38978990047917433,
+    "val_runtime": 1.6373,
+    "val_samples_per_second": 3314.091,
+    "val_steps_per_second": 26.264,
+    "epoch": 3.0
+  },
+  "test": {
+    "test_loss": 0.09231854975223541,
+    "test_macro_f1": 0.26412572837733145,
+    "test_micro_f1": 0.5219375583445701,
+    "test_weighted_f1": 0.4582084232608297,
+    "test_subset_accuracy": 0.386769854431546,
+    "test_runtime": 1.6188,
+    "test_samples_per_second": 3352.53,
+    "test_steps_per_second": 26.563,
+    "epoch": 3.0
+  }
+}

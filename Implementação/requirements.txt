@@ -1,0 +1,33 @@
+# ============================================================
+# Trabalho Final PLN - Analise de Emocoes em Textos (GoEmotions)
+# Classificacao multi-label com Transformers (BERT / RoBERTa)
+# ============================================================
+#
+# IMPORTANTE: o PyTorch deve ser instalado SEPARADAMENTE antes
+# deste arquivo, pois a build com suporte a CUDA vem de um
+# indice proprio:
+#
+#   Local (GPU NVIDIA, CUDA 12.1):
+#     pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+#
+#   Google Colab: o torch ja vem pre-instalado -> pule essa etapa.
+#
+# Depois, instale o restante com:
+#     pip install -r requirements.txt
+# ============================================================
+
+transformers==4.46.3
+datasets==3.1.0
+# pyarrow fixado: datasets 3.1.0 nao tem teto de versao e o pip puxa o pyarrow
+# mais recente (24.x), que causa crash nativo (access violation) ao montar o
+# schema Arrow. 17.0.0 e compativel e estavel.
+pyarrow==17.0.0
+accelerate==1.1.1
+scikit-learn==1.5.2
+pandas==2.2.3
+numpy==1.26.4
+matplotlib==3.9.2
+seaborn==0.13.2
+PyYAML==6.0.2
+tqdm==4.67.1
+ipykernel==6.29.5

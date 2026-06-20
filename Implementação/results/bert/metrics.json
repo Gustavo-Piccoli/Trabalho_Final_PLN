@@ -1,0 +1,29 @@
+{
+  "model_name": "bert-base-uncased",
+  "smoke": false,
+  "threshold": 0.5,
+  "max_length": 64,
+  "epochs": 3.0,
+  "validation": {
+    "val_loss": 0.10531648993492126,
+    "val_macro_f1": 0.13461797200231265,
+    "val_micro_f1": 0.45152112059531624,
+    "val_weighted_f1": 0.3447566959402938,
+    "val_subset_accuracy": 0.3227054920751935,
+    "val_runtime": 1.7951,
+    "val_samples_per_second": 3022.704,
+    "val_steps_per_second": 23.954,
+    "epoch": 3.0
+  },
+  "test": {
+    "test_loss": 0.10432931780815125,
+    "test_macro_f1": 0.13746249993313342,
+    "test_micro_f1": 0.4521158129175947,
+    "test_weighted_f1": 0.3462576522302872,
+    "test_subset_accuracy": 0.3150912106135987,
+    "test_runtime": 1.7505,
+    "test_samples_per_second": 3100.338,
+    "test_steps_per_second": 24.565,
+    "epoch": 3.0
+  }
+}

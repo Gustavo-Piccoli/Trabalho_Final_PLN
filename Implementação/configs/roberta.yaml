@@ -1,0 +1,28 @@
+# Configuracao do MODELO PRINCIPAL (RoBERTa) - GoEmotions multi-label
+# Versao otimizada do BERT (mais dados, sem NSP, tokenizacao BPE).
+#
+# Hiperparametros ajustados para GPU L4 (Colab Pro, 24GB).
+# Para rodar local na GTX 1650 (4GB): reduza per_device_train_batch_size
+# para 16 e gradient_accumulation_steps para 2 (batch efetivo continua 32).
+
+model_name: roberta-base
+output_dir: results/roberta
+run_name: roberta-base-goemotions
+
+# Dados / tarefa
+max_length: 64
+threshold: 0.5
+
+# Hiperparametros de treino (espelham o baseline para comparacao justa)
+training:
+  per_device_train_batch_size: 64     # L4 (24GB) acomoda com folga (modelo base, max_length 64)
+  per_device_eval_batch_size: 128
+  gradient_accumulation_steps: 1       # batch efetivo = 64 (nao precisa acumular na L4)
+  learning_rate: 2.0e-5
+  num_train_epochs: 5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  fp16: true
+  logging_steps: 50
+
+seed: 42
